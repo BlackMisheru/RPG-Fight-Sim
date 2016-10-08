@@ -42,6 +42,15 @@ label attack:
 ############################
 	
 label magic:
+
+	menu:
+		"Magic Arrow":
+			$ MP -= 10
+		"Magic Barrier":
+			$ damage -= 20
+		"Heal":
+			$ MP -= 15
+			$ HP += 30
 	
 	jump enemy_attack
 	
