@@ -5,6 +5,8 @@
 $ HP = 0
 $ MP = 0
 
+$ damage
+
 ############################
 
 label fight_start:
@@ -46,6 +48,11 @@ label magic:
 ############################
 	
 label block:
+
+	if use_block == True:
+		$ damage = False
+	else:
+		$ damage = True
 	
 	jump enemy_attack
 	
