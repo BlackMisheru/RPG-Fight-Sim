@@ -57,7 +57,11 @@ label escape:
 	
 ############################
 
-label enemy_attack:
+label enemy_attack: # enemy can only attack/magic or defend
+
+	if action == "Attack":
+		# attack
+	else:
+		# defend
 	
 	jump player
-	
