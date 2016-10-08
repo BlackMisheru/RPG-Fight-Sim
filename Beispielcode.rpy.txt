@@ -5,7 +5,8 @@
 $ HP = 0
 $ MP = 0
 
-$ damage
+$ damage = 0 # variable can change between string, bool and int without any problems
+$ escape = False
 
 ############################
 
@@ -69,7 +70,10 @@ label block:
 	
 label escape:
 	
-	jump enemy_attack
+	if escape == True:
+		return
+	else:
+		jump enemy_attack
 	
 ############################
 
