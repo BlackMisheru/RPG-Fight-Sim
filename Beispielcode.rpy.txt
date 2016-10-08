@@ -1,0 +1,63 @@
+##################################################
+#------> Simple RPG based Fight Simulator <------#
+##################################################
+
+$ HP = 0
+$ MP = 0
+
+############################
+
+label fight_start:
+	
+	"%(enemy)s appeared!"
+	
+	jump player
+	
+############################
+	
+label player:
+
+	"What will you do?"
+	
+	menu:
+		"Attack":
+			jump attack
+		"Magic":
+			jump magic
+		"Block":
+			jump block
+		"Escape":
+			jump escape
+	
+	return
+	
+############################
+	
+label attack:
+	
+	jump enemy_attack
+	
+############################
+	
+label magic:
+	
+	jump enemy_attack
+	
+############################
+	
+label block:
+	
+	jump enemy_attack
+	
+############################
+	
+label escape:
+	
+	jump enemy_attack
+	
+############################
+
+label enemy_attack:
+	
+	jump player
+	
